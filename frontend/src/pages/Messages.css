@@ -1,0 +1,153 @@
+
+/* =========================================
+   CONNECTHUB - MESSAGES PAGE
+   Responsive styling for desktop and mobile
+   ========================================= */
+
+/* Apply box sizing to the Messages page */
+main:has(input[aria-label="Search conversations by name"]),
+main:has(input[aria-label="Search conversations by name"]) * {
+  box-sizing: border-box;
+}
+
+main:has(input[aria-label="Search conversations by name"]) {
+  width: 100%;
+  overflow-x: clip;
+}
+
+main:has(input[aria-label="Search conversations by name"]) > div {
+  width: 100%;
+}
+
+/* Main conversation panel */
+main:has(input[aria-label="Search conversations by name"])
+div[style*="grid-template-columns"] {
+  width: 100%;
+}
+
+/* Keyboard accessibility */
+main:has(input[aria-label="Search conversations by name"]) a:focus-visible,
+main:has(input[aria-label="Search conversations by name"]) button:focus-visible,
+main:has(input[aria-label="Search conversations by name"]) input:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: 2px;
+}
+
+/* Prevent overflowing content */
+main:has(input[aria-label="Search conversations by name"]) aside,
+main:has(input[aria-label="Search conversations by name"]) section {
+  min-width: 0;
+}
+
+main:has(input[aria-label="Search conversations by name"])
+section > div[style*="max-height"] {
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+main:has(input[aria-label="Search conversations by name"]) form,
+main:has(input[aria-label="Search conversations by name"]) form input {
+  min-width: 0;
+}
+
+/* =========================================
+   TABLETS AND MOBILE DEVICES
+   ========================================= */
+
+@media (max-width: 760px) {
+  main:has(input[aria-label="Search conversations by name"]) {
+    padding: 18px 10px !important;
+  }
+
+  main:has(input[aria-label="Search conversations by name"]) > div {
+    max-width: 100% !important;
+  }
+
+  /* Page heading */
+  main:has(input[aria-label="Search conversations by name"])
+  > div > header {
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  main:has(input[aria-label="Search conversations by name"]) h1 {
+    font-size: 25px !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* Stack the conversation list and chat vertically */
+  main:has(input[aria-label="Search conversations by name"])
+  div[style*="grid-template-columns"] {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: auto !important;
+    border-radius: 14px !important;
+  }
+
+  /* Conversations sidebar */
+  main:has(input[aria-label="Search conversations by name"]) aside {
+    border-right: none !important;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 14px 10px !important;
+    max-height: 42vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  main:has(input[aria-label="Search conversations by name"]) aside button {
+    min-height: 58px;
+  }
+
+  /* Chat window */
+  main:has(input[aria-label="Search conversations by name"]) section {
+    min-height: 560px;
+  }
+
+  /* Scrollable message area */
+  main:has(input[aria-label="Search conversations by name"])
+  section > div[style*="max-height"] {
+    min-height: 320px !important;
+    max-height: 52vh !important;
+    max-height: 52dvh !important;
+    padding: 14px !important;
+  }
+
+  /* Message input area */
+  main:has(input[aria-label="Search conversations by name"]) section form {
+    gap: 8px !important;
+    padding: 10px !important;
+  }
+
+  main:has(input[aria-label="Search conversations by name"])
+  section form input {
+    padding: 11px !important;
+    font-size: 16px;
+  }
+
+  main:has(input[aria-label="Search conversations by name"])
+  section form button[type="submit"] {
+    padding: 10px 12px !important;
+    white-space: nowrap;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE SCREENS
+   ========================================= */
+
+@media (max-width: 420px) {
+  main:has(input[aria-label="Search conversations by name"]) {
+    padding: 14px 8px !important;
+  }
+
+  main:has(input[aria-label="Search conversations by name"])
+  section > div[style*="max-height"] {
+    padding: 10px !important;
+  }
+
+  main:has(input[aria-label="Search conversations by name"])
+  section form button[type="submit"] {
+    padding: 10px !important;
+    font-size: 13px;
+  }
+}
