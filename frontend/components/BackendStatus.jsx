@@ -6,7 +6,7 @@ function BackendStatus() {
   const [connected, setConnected] = useState(false);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/health")
+    fetch("https://connecthub1.onrender.com/api/health")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Backend request failed");

@@ -32,7 +32,7 @@ function Signup() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/auth/signup",
+        "https://connecthub1.onrender.com/api/auth/signup",
         {
           method: "POST",
           headers: {
