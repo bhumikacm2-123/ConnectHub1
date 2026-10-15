@@ -1538,5 +1538,8 @@ def delete_private_message(message_id):
 # =========================================================
 if __name__ == "__main__":
     app.run(
-        https://connecthub1.onrender.com
+        host="127.0.0.1",
+        port=5000,
+        debug=True,
+        use_reloader=False
     )
