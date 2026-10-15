@@ -29,7 +29,10 @@ JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
 # on any port. Restrict this to your frontend origin in production.
 CORS(
     app,
-    origins=[re.compile(r"^http://(localhost|127\.0\.0\.1):\d+$")],
+    origins=[
+        re.compile(r"^http://(localhost|127\.0\.0\.1):\d+$"),
+        "https://connect-hub1.vercel.app",
+    ],
 )
 initialize_database()
 initialize_messages_table()
@@ -1535,8 +1538,5 @@ def delete_private_message(message_id):
 # =========================================================
 if __name__ == "__main__":
     app.run(
-        host="127.0.0.1",
-        port=5000,
-        debug=True,
-        use_reloader=False
+        https://connecthub1.onrender.com
     )
